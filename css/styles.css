@@ -1,0 +1,207 @@
+/*Pate general de la pagina*/
+* {
+    margin: 0%;
+    padding: 0%;
+}
+
+.Container{
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+	overflow: hidden;
+    
+}
+
+/*Parte del "header"*/
+.header1{
+	background: #014983;
+	padding: 5px 0;
+	text-align: center;
+	border-bottom: 4px solid #ffc90b;
+	
+}
+
+.logo{
+    width: 138.08px;
+    height: 60px;    
+	vertical-align: middle;
+}
+
+/*Parte del "section"*/
+.main {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+/*Aqui simplemente se la da la forma (margenes,padding, tamaño, bordes),a la caja que esta dentro 
+del .main */
+.box{
+	width: 95%;
+	height: auto;
+	padding-right: 15px;
+    padding-left: 15px;
+	padding: 30px 5px 30px 5px;
+    background: #fff;
+    border-radius: 10px; /*Se le cambia el radio del borde para que no sea totalmente rectangular*/
+    box-shadow: rgba(0,0,0,.5) 0 5px 10px; /*Sombra para resaltar la caja del contenido*/
+    border-top: 6px solid #ffc90a;
+	border-bottom: 6px solid #039be5;
+	box-sizing: border-box;
+}
+/*Aqui se la da forma, color, y la fuente al titulo "Cartelera Cartagena*/
+h2, b{
+	font-weight: 500;
+}
+.title {
+    font-family: 'Fjalla One',sans-serif;
+    text-transform: uppercase; /*Se transforma el texto a mayusculas*/
+	margin: 20px 0 5px;
+	font-size: 35px;
+   
+} 
+.title b{
+	color: #039be5;
+}
+/*Se anima el titulo de Cartelera para cuando pases el cursor del mouse sobre este*/
+.title b:hover{
+	color: black;
+	cursor: cell;
+}
+/*Cuando el tamaño maximo de la pantalla sea 700px se cambia la vista de algunos elementos */
+@media (max-width:700px){
+    .title{
+		text-align: center; /*El titulo "Cartelera Cartagena" se pone centrado en pantalla*/
+		font-size: 25px; /*Se disminuye el tamaño de letra*/
+    }
+}
+/*Desde esta parte se la da forma a las filas de contenido*/
+.row1, .row2 {
+	overflow: hidden;
+}
+
+.row1 ul, .row2 ul{
+	list-style: none; /*Al no usar el CSS reset tuve que quitar el estilo de lista*/
+	margin: 0.5%;
+    padding: 0;
+	display: flex; /*Los elementos de la fila se extienden en el ancho permitido*/
+	width: 100%; /*Significa que la fila dentro del div "box" va a ocupar el 100% del ancho*/
+}
+/*En esta parte se edita la forma de las columnas, es decir el contenido visible*/
+.row1 ul li,.row2 ul li{
+	display: block; /*Cada elemento de la lista no ordenada se coloca dentro de un bloque*/
+	width: 100%;
+}
+/*Aunque el anterior son las columnas, aqui se edita cada elemento de las columnas*/
+/*Recordar que cada columna es en realidad un elemento de la lista no ordenada*/
+.row1 li .movie,.row2 li .movie{
+	padding: 10px;
+	display: block;
+	text-decoration: none;
+	width: 50%;
+}
+/*Se le da forma a las imagenes de cada columna*/
+img.pequeña{
+    width: 135px;
+	height: 202.5px;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,.5) 0 5px 10px;
+	
+}
+/*Se edita el estilo del titulo de la pelicula que esta debajo de cada imagen por box shape*/
+.movietitle{
+	font-family: 'Fjalla One',sans-serif;
+	font-size: 14px;
+}
+
+/*Desde aqui hasta donde terminan los @media se juega con los elementos para adaptarlos cuando
+el maximo ancho de pantalla sea el estipulado por mi, segun los estandares*/
+@media (max-width:921px){
+	img.pequeña{
+		width: 120px;
+		height: 170px;
+	}
+}
+
+
+@media (max-width:625px){
+	img.pequeña{
+		width: 100px;
+		height: 150px;
+	}
+}
+
+@media (max-width:528px){
+	img.pequeña{
+		width: 100%;
+		height: 100%;
+	}
+	.row1,.row2{
+        position: relative;
+        width: 70%;
+       
+    }
+    .row1 ul,.row2 ul{
+		flex-direction: column;
+		padding-left: 35%;
+    }
+    .row1 li,.row2 li{
+		border-top: 1px solid #fff;
+		text-align: center;
+	}
+	.row1 li .movie,.row2 li .movie{
+		padding: 10px;
+		display: block;
+		text-decoration: none;
+		width: 60%;
+	}
+}
+
+@media (max-width:300px){
+	.row1 ul,.row2 ul{
+		padding-left: 15px;
+    }
+    .row1 li,.row2 li{
+		text-align: start;
+	}	
+}
+/*Aqui se le da un efecto a la imagen de la pelicula cuando pasas el cursor sobre esta*/
+img.pequeña:hover{
+	cursor: pointer;
+	z-index:1;
+	filter:alpha(opacity=70);
+	-moz-opacity:.8;
+	opacity:.8;
+	/*Solo esta pieza de codigo es tomada de https://www.dariobf.com/efecto-hover-transparente-con-css/
+	Todos los derechos reservados*/
+}
+
+/*Parte del footer*/
+/*Se le da estilo al footer, el logo y el contenido dentro de este*/
+footer{
+	width: 100%;
+    max-width: 1000px;
+    margin: 0 auto;
+	overflow: hidden;
+	background: #2b2b2b;
+	margin-top: 20px;
+}
+img.logox{
+	width: 200px;
+	height: 108.11px;
+	vertical-align: middle;
+}
+
+.contenido{
+	position: relative;
+    width: 100%;
+    background: #2b2b2b;
+	padding: 20px 0 30px;
+	display: block;
+	text-align: center;
+	
+}
+.copyright  p,.copyright  p a {
+	color: #949494;
+}

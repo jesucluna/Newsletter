@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/styles.css">
+    <!--Este nuevo "rel" lo uso para darle un icono a mi pagina dentro del navegador-->
+    <link rel="shortcut icon" href="resources/icon.png" type="image/x-icon">
+    <!--Me conecto a la api de google para importar una tipo de fuente de letra-->
+    <link href="https://fonts.googleapis.com/css?family=Fjalla+One&display=swap" rel="stylesheet">
+    <!--Titulo de mi pagina-->
+    <title>Royal Films News</title> 
+</head>
+
+<body>
+    <!--Pongo todo el contenido de mi newsletter dentro de un div, lo separe en tres secciones,
+        el header (donde va la primera parte, se pone lo relevante, en este caso el logo), 
+        el section (el main donde ira mi contenido) y el footer (donde puse el copyright)-->
+    <div class="Container">
+        
+        <header class="header1">
+            <img class="logo" src="resources/logo1.png" alt="royal">
+        </header>
+        <section class="main">
+            <!--El main lo dividi en varios "div", porque trabaje con el box shape-->
+            <div class="titlebox">
+                <h2 class="title">
+                    Cartelera <b>Cartagena</b>
+                </h2>
+            </div>
+            <div class="box">
+                <!--El box lo dividi en dos partes que hacen la funcion de filas-->
+                <!--Dentro de cada fila puse una lista no ordenada con 4 elementos, y cada 
+                    elemento de la lista hará la funcion de columnas-->
+                <!--Entonces el contenido lo divido en 2 filas de 4 columnas donde se mostraran
+                8 peliculas de la cartelera actual en Cartagena de Royal Films-->
+                <!--El efecto matriz lo hago con CSS-->
+                <div class="row1">
+                    <!--Fila 1-->
+                    <ul>
+                         <!--Dentro de cada elemento de la lista puse un contenedor con un "div" que
+                        tiene la foto y el nombte de la pelicula-->
+                        <!--El "a" es para que cuando se le da click a la imagen de la pelicula,
+                        se redirecciona al usuario a la informacion de esta en la pagina oficial-->
+                        <li> <!--Columna 1-->
+                            <div class="movie">
+                                <a target="_blank"
+                                    href="https://royal-films.com/pelicula/cartagena/1142/los-fierros"><img
+                                        class="pequeña" src="resources/los-fierros.jpg" alt="Lps Fierros"></a>
+                                <div class="movietitle">
+                                    <p>Los Fierros</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--Columna 2-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1098/anna" target="_blank"><img
+                                        class="pequeña" src="resources/anna.jpg" alt="Anna"></a>
+                                <div class="movietitle">
+                                    <p>Anna</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--Columna 3-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1123/boonie-bears-una-osa-aventura-en-miniatura"
+                                    target="_blank" rel="noopener noreferrer"><img class="pequeña"
+                                        src="resources/boonie-bears.jpg" alt="Boonie Bears"></a>
+                                <div class="movietitle">
+                                    <p>Boonie Bears</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li> <!--Columna 4-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1032/dora-y-la-ciudad-perdida"
+                                    target="_blank"><img class="pequeña"
+                                    src="resources/dora-y-la-ciudad-perdida.jpg" alt="Dora y la Ciudad Perdida"></a>
+                                <div class="movietitle">
+                                    <p>Dora y La Ciudad Perdida</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="row2"> <!--Fila 2-->
+                    <ul>
+                        <li> <!--Columna 1-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1117/el-convento-siniestro"
+                                    target="_blank"><img class="pequeña" src="resources/el-convento-siniestro.jpg"
+                                        alt="El Convento Siniestro"></a>
+                                <div class="movietitle">
+                                    <p>El Convento Siniestro</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><!--Columna 2-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1068/it-capitulo-2" target="_blank">
+                                    <img class="pequeña" src="resources/it-capitulo-2.jpg" alt="It: Capitulo 2"></a>
+                                <div class="movietitle">
+                                    <p>It: Capitulo 2</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><!--Columna 3-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1030/angry-birds-2-la-pelicula"
+                                    target="_blank">
+                                    <img class="pequeña" src="resources/angry-birds2.jpg" alt="Angry Birds 2"></a>
+                                <div class="movietitle">
+                                    <p>Angry Birds 2</p>
+                                </div>
+                            </div>
+                        </li>
+                        <li><!--Columna 4-->
+                            <div class="movie">
+                                <a href="https://royal-films.com/pelicula/cartagena/1130/un-panda-en-apuros"
+                                    target="_blank">
+                                    <img class="pequeña" src="resources/un-panda-en-apuros.jpg"
+                                        alt="Un panda en apuros"></a>
+                                <div class="movietitle">
+                                    <p>Un Panda En Apuros</p>
+                                </div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+    </div>
+    </div>
+    </section>
+    <footer class="info"> 
+        <!--En el footer se pone un logo y la informacion del copyright-->
+        <div class="contenido">
+            <div class="logoextend">
+                <img class="logox" src="resources/logo2.png" alt="Logo2">
+            </div>
+            <div class="copyright">
+                <p>Copyright© 2012 todos los derechos reservados
+                    Royal Flims ® SAS.</p>
+                <br>
+                <p>Todos los iconos e imagenes se toman de <a target="_blank"
+                        href="https://royal-films.com/cartelera/cartagena">Royal Films Colombia</a> </p>
+            </div>
+        </div>
+
+    </footer>
+    </div>
+</body>
+
+</html>
